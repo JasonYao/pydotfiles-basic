@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+##
+# OSX specific dotfiles (alias to .bashrc)
+##
+
+if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ]; then
+	# shellcheck source=/dev/null
+	source "$HOME/.bashrc"
+fi

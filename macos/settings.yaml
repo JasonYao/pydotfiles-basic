@@ -1,0 +1,47 @@
+version: "alpha"
+os:
+    name: "macos"
+    shell: "bash"
+    packages:
+        - "coreutils"
+        - "wget"
+        - "bash"
+        - "unrar"
+
+        # These GNU commands normally install with a 'g' prefix
+        # in order to avoid name clashing on macos- this flag
+        # will remove that, and just install it with the same name
+        - "grep --with-default-names"
+        - "gnu-tar --with-default-names"
+        - "gnu-sed --with-default-names"
+
+        - "vim"
+        - "tree"
+        - "tmux"
+        - "git"
+    applications:
+        - "flux"
+        - "atom"
+        - "google-chrome"
+        - "firefox"
+        - "vlc"
+        - "qbittorrent"
+        - "iterm2"
+    default_dock:
+        - "launchpad"
+        - "Notes"
+        - "iTunes"
+        - "appstore"
+        - "systempreferences"
+        - "firefox"
+
+actions:
+- action: symlink
+  files:
+    "bash_profile": "~/.bash_profile"
+  hidden: true
+- action: symlink
+  files:
+    "~/.motd": "/etc/motd"
+  sudo: true
+  absolute: true

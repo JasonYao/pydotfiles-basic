@@ -1,0 +1,6 @@
+# Shell configurations
+
+# Provides some nice command-line utilities
+	if [ -f $HOME/.utilities ]; then
+		source $HOME/.utilities
+	fi

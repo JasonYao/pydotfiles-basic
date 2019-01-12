@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+##
+# MacOS-specific setup
+##
+
+# See https://stackoverflow.com/a/1482133
+directory_name=$(dirname $0)
+
+# Sets up background images
+echo "Background Image: Checking background image status"
+
+# Note the enclosing single quotes around bash variables when trying to use them in applescripts
+if osascript -e 'tell application "System Events" to set picture of every desktop to ("'$directory_name'/../img/background.png" as POSIX file as alias)' ; then
+    echo "Background: Desktop image is now correctly set"
+else
+    echo "Background: Desktop image failed to be set"
+fi
