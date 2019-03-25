@@ -5,6 +5,8 @@ when you first `pydotfiles init` a directory.
 > A solid starting-set of dotfiles to quickly hit the ground
   running
 
+current version: v1
+
 ## Overview
 TODO
 
